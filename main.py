@@ -128,7 +128,7 @@ def init_grid():
         grid_column[i] = 5
 
 def help_info():
-    answer = messagebox.askokcancel('Information', 'Connect4 is a two-player connection game in which the players first choose a colour and then take turns dropping coloured discs from the top into a seven-column, six-row vertically suspended grid. The pieces fall straight down, occupying the next available space within the column. The objective of the game is to connect four of one\'s own discs of the same colour next to each other vertically, horizontally, or diagonally before your opponent.')
+    answer = messagebox.askokcancel('Information', '    Connect4 is a two-player connection game in which the players first choose a colour and then take turns dropping coloured discs from the top into a seven-column, six-row vertically suspended grid.\n    The pieces fall straight down, occupying the next available space within the column.\n    The objective of the game is to connect four of one\'s own discs of the same colour next to each other vertically, horizontally, or diagonally before your opponent.\n')
 
 x_start = 155
 y_start = 180
