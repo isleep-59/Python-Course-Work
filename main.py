@@ -76,7 +76,11 @@ def check(x, y):
     return False
 
 def drop(idx):
-    global turn, canvas, grid
+    global turn, canvas, grid, grid_column
+    if grid_column[idx] < 0:
+        messagebox.askokcancel('Information', 'Chess pieces can\'t be put down')
+        return
+
     if turn == -1:
         canvas.itemconfig(ovals[idx][grid_column[idx]],fill=a_color)
         grid[idx][grid_column[idx]] = a_color
