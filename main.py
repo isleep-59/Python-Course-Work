@@ -3,6 +3,7 @@ from tkinter import colorchooser
 from tkinter import messagebox
 
 def game_start():
+    init_grid()
     game_menu.entryconfig(0,state='disable')
     game_menu.entryconfig(1, state='normal')
     menu_bar.entryconfig(2,state='disable')
@@ -13,6 +14,7 @@ def game_start():
 def game_finish():
     global a_score, b_score, l_a, l_b
 
+    init_grid()
     game_menu.entryconfig(0, state='normal')
     game_menu.entryconfig(1, state='disable')
     menu_bar.entryconfig(2, state='normal')
@@ -116,6 +118,8 @@ def score_add(tmp):
     return
 
 def init_grid():
+    global turn
+    turn = -1
     for i in range(0, 7):
         for j in range(0, 6):
             grid[i][j] = grid_color
